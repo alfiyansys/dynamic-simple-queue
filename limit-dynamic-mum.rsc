@@ -3,11 +3,11 @@ job remove [find script="limitDynamic"];
 remove [find name="limitDynamic"];
 add name="limitDynamic" source={
 
-	:local filterARP "br-local";
-	:local targetAddress "192.168.10.0/24";
+	:local filterARP "bridge";
+	:local targetAddress "192.168.48.0/21";
 	:local limitClient "3M";
-	:local limitParent "30M";
-	:local parentLimit "0-Parent";
+	:local limitParent "20M";
+	:local parentLimit "Tree0";
 	:local packetMark "client.p";
 	:local delay "60s";
 
